@@ -18,8 +18,12 @@ A better solution is to introduce a one-stop solution as an application with use
  OBJECTIVES
  
 •	To obtain interest of users and refresh news based on their activity.
+
 •	To provide a user interface for category-based news cards are shown as well as shuffled news with ease of accessibility.
+
 •	For location-based news, default is current location. Also, preferrable locations can be considered.
+
 •	To provide a news feed over regional or preferred language.
+
 •	To provide a pin element to point a region over the map by collaborating with Maps API and point a location for current news.
 
