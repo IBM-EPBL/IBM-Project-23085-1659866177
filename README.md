@@ -39,6 +39,6 @@ A better solution is to introduce a one-stop solution as an application with use
 
 
 ## PROJECT WORKFLOW
-![Screen Shot](assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/screenshot.png)
+![Screen Shot](assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/screenshot.jpg)
 
 
