@@ -7,8 +7,10 @@
 - [About The Project](#about-the-project)
 - [Introduction](#introduction)
 - [Motivation](#motivation)
-- [Objectives](#objectives)
 - [Project Workflow](#project-workflow)
+- [Objectives](#objectives)
+- [Technical Architecture](#technical-architecture)
+
 ## INTRODUCTION
  
 Over half the population of the world regardless of their identity are the users who consume news on social media.<br/>
@@ -22,6 +24,10 @@ With the news being created every minute and relayed through TV, radio and inter
 A better solution is to introduce a one-stop solution as an application with user Interface, categorizable and filterable content, easy offline access and social media integration.
 
 
+## PROJECT WORKFLOW
+![Screen Shot](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/screenshot.jpg)
+
+
 ## OBJECTIVES
     
 * To obtain interest of users and refresh news based on their activity.
@@ -31,7 +37,8 @@ A better solution is to introduce a one-stop solution as an application with use
 * To provide a pin element to point a region over the map by collaborating with Maps API and point a location for     current news.
 
 
-## PROJECT WORKFLOW
-![Screen Shot](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/screenshot.jpg)
+## TECHNICAL ARCHITECTURE
+
+![Architecture](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/tecnical%20architecture.png)
 
 
