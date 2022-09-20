@@ -4,7 +4,6 @@
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
 - [Introduction](#introduction)
 - [Motivation](#motivation)
 - [Project Workflow](#project-workflow)
