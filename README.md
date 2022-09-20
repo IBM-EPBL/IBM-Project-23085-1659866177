@@ -39,6 +39,6 @@ A better solution is to introduce a one-stop solution as an application with use
 
 ## TECHNICAL ARCHITECTURE
 
-![Architecture](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/tecnical%20architecture.png)
+![Architecture](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/technical%20architecture.png)
 
 
