@@ -17,12 +17,12 @@ def aboutPage():
 
 @app.route("/signin")
 def signinPAGE():
-    return "signin Page!!"
+    return render_template('signin.html')
 
 
 @app.route("/signup")
 def signupPAGE():
-    return "signup Page!!"
+    return render_template('signup.html')
 
 
 @app.route("/admin")

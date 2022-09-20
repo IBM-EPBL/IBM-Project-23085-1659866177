@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
+
+    {% block head %}
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Landing Page Design Using HTML & CSS</title>
     <style>
@@ -15,7 +12,7 @@
 .container {
     height: 100vh;
     width: 100%;
-    background-image: url(/back.jpg);
+    background-image: url(/static/back.jpg);
     background-position: center;
     background-size: cover;
     padding-right: 3%;
@@ -146,11 +143,13 @@ nav ul li a {
     justify-content: flex-end;
 }
     </style>
-</head>
-<body>
+    {% endblock %}
+
+    
+{% block body %}
     <div class="container">
         <div class="header">
-            <img src="/logo.png" class="logo">
+            <img src="/static/logo.png" class="logo">
             <nav>
                 <ul>
                     <li><a href="">Home</a></li>
@@ -174,6 +173,4 @@ nav ul li a {
         </div>
        </div>
    </div>
-</body>
-</html>
- 
+   {% endblock %} 
