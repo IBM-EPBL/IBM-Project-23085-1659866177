@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    <title></title>
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+        }
+        body{
+            background-image: url(../static/squa.jpg);
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            padding-left: 30px ;
+        }
+        .home{
+            /* background-image: url(../static/backg.jpg); */
+            width: auto;
+        }
+        .logo{
+            display: flex;
+            /* gap: 20px; */
+            /* flex-direction: row; */
+        }
+        .logo h1{
+            align-items: center;
+            padding: 15px;
+            font-size: 60px;
+            /* height: 100px; */
+        }
+        .pur{
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            margin: 10% 30%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .pur button{
+            background-color: green;
+            color: #fff;
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    {% endblock %}
+    {% block body %}
+    <div class="home">
+        <div class="logo">
+            <img src="../static/flasklogo.jpg" alt="logo">
+            <h1>FRUTO</h1>
+        </div> 
+        <div class="pur">
+            <h1>ALL FRUITS IN ONE TREE</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Sint sequi temporibus hic numquam illum nemo veniam qui quidem,maiores, perferendis quisquam neque fugit. Numquam soluta magni at vel doloribus eveniet.</p>
+            <button>PURCHASE NOW</button>
+        </div>
+    </div>
+
+    {% endblock %} 
