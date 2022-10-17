@@ -24,7 +24,7 @@ A better solution is to introduce a one-stop solution as an application with use
 
 
 ## PROJECT WORKFLOW
-![Screen Shot](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/screenshot.jpg)
+![Screen Shot](Assessments/Team%20Lead(Siva%20Subramanian%20S)/images/screenshot.jpg)
 
 
 ## OBJECTIVES
@@ -38,6 +38,6 @@ A better solution is to introduce a one-stop solution as an application with use
 
 ## TECHNICAL ARCHITECTURE
 
-![Architecture](Assessments/Team%20Lead(Siva%20Subramanian%20S)/Assignment%201/images/technical%20architecture.png)
+![Architecture](Assessments/Team%20Lead(Siva%20Subramanian%20S)/images/technical%20architecture.png)
 
 
