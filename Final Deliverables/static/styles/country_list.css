@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+.container {
+  margin: 5em auto;
+  width: 500px;
+}
+
+#text {
+  display: block;
+  font-size: 1.5rem;
+  background-color: #5A7D9F;
+  color: white;
+  border: none;
+  padding: .5em;
+  width: 500px;
+  border-radius: 15px;
+}
+
+#text::placeholder {
+  color: rgba(255, 255, 255, .7);
+}
+
+.filters-letter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#show-all #sort {
+  padding: .5em 1em;
+  background-color: #5A7D9F;
+  border: none;
+  text-transform: uppercase;
+  opacity: .7;
+  transition: all .2s ease-in;
+  position: relative;
+}
+
+#show-all #sort:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #5A7D9F;
+  transform: scale(1.25);
+  z-index: 2;
+}
+
+#show-all #sort.filters__basic:hover {
+  z-index: 10;
+}
+
+#show-all #sort.active {
+  background-color: #5A7D9F;
+}
+
+ul.country-list {
+  list-style-type: none;
+  padding: 0;
+  width: 500px;
+}
+
+ul.country-list li {
+  font-size: 1.5rem;
+  padding: .5em;
+  background-color:#0A3D62;
+  opacity: .9;
+}
+
+ul.country-list li:hover {
+  transform: scale(1.025);
+  opacity: 1;
+}
+
+li.hide {
+  display: none;
+}
+
+ul.country-list li a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
