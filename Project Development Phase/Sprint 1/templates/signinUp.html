@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>    
+</head>
+<body>
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/signin_style.css') }}">
+    <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+/>
+<link rel="stylesheet" href="style.css">
+
+<!-- <h2 style="color:#5A7D9F;">News Tracker Application</h2> -->
+<h2 style="color:#5A7D9F;">NEWS TRACKER APPLICATION</h2>
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="/login" method="post">
+      <input type="email" placeholder="Email Address" name="mmail" required/>
+      <input type="password" placeholder="Password" name="password" required/>
+      <p>forgot password?</p>
+      <button type="submit">Log In</button>
+      <h1></h1>
+      <span>----- or -----</span>
+      <div class="social-container">
+        <a href="#" target="_blank" class="icon-facebook">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+        <a href="#" target="_blank" class="icon-google">
+          <i class="fab fa-google"> </i>
+        </a>
+      </div>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form action="/addData" method="post">
+      <h1>Create Account.</h1>
+      <!-- <span>Sign up to get started!</span> -->
+      <input type="text" placeholder="Username" name="name" required/>
+      <input type="email" placeholder="Email Address" name="mmail" required/>
+      <input type="text" placeholder="Country" name="country" required/>
+      <input type="password" placeholder="Password" name="password" required maxlength="8" minlength="2"/>
+      <input type="password" placeholder="Confirm Password" required maxlength="8" minlength="2"/>
+      <a href="#"
+        >By signing up you agree to Terms of Service and Privacy Policy</a
+      >
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Hello, Friend!</h1>
+        <p>
+          Don't have an account? <br />
+          Enter you personal details here.
+        </p>
+        <button class="ghost" id="signIn">Sign Up</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Already have an account?</h1>
+        <p>Keep in track with your progress By logging in to your account</p>
+        <button class="ghost" id="signUp">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+  });
+</script>
+
+</body>
+</html>
