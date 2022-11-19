@@ -13,7 +13,12 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template('signinUp.html')
-    
+@app.route('/dat')
+def dat():
+    return render_template("date_list.html")
+@app.route('/cat')
+def cat():
+    return render_template("cat_list.html")
 
 @app.route('/dash')
 def dash():
@@ -106,6 +111,123 @@ def login():
             else:
                 # print("Wrong pwd")
                 return render_template("hello_copy.html")
+        except Exception as e:
+             print("Exception : "+str(e))
+
+
+@app.route('/country',methods=["POST","GET"])
+def country():
+      if request.method=='POST':
+        try:            
+            id=request.form['country']
+            # id="in"
+            # print("country: "+id)
+
+    
+            topheadlines=newsapi.get_top_headlines(country=id.lower(),page=2)
+            # from_param="2022-11-08",to="2022-11-09",page=2,
+            articles=topheadlines['articles']   
+            desc=[]
+            news=[]
+            img=[]
+            timing=[]
+            more=[]
+            auth=[]
+            for i in range(len(articles)):
+                myarticles=articles[i]
+
+                news.append(myarticles['title'])
+                desc.append(myarticles['description'])
+                img.append(myarticles['urlToImage'])
+                x=myarticles['publishedAt']
+                timing.append(x[0:10]+" @ "+x[11:16])
+                more.append(myarticles['url'])
+                au=myarticles['author']
+                if au==None or au[0:3]=="htt": 
+                    au="Media News"
+                auth.append(au)
+            myList=zip(desc,news,img,timing,more,auth)  
+
+            topsources=newsapi.get_sources(country=id.lower())
+            articles=topsources['sources']
+            desc=[]#category
+            name=[]
+            url=[]
+            chan=[]
+            # timing=[]
+            coun=[]
+            for i in range(len(articles)):
+                myarticles=articles[i]
+                chan.append(myarticles['id'])
+                name.append(myarticles['name'])
+                desc.append(myarticles['category'].capitalize())
+                url.append(myarticles['url'])
+                coun.append(myarticles['country'].upper())
+
+            mySources=zip(name,desc,url,coun,chan)  
+
+            return render_template('dash_country.html',context=myList,channels=mySources,id=id.upper())
+        except Exception as e:
+             print("Exception : "+str(e))
+
+
+
+@app.route('/date',methods=["POST","GET"])
+def date():
+      if request.method=='POST':
+        try:            
+            from_dat=request.form['from']
+            to=request.form['to']
+            lan=request.form['language']
+
+            # id="in"
+            # print("Date: "+from_dat+" : "+to)
+
+    
+            topheadlines=newsapi.get_everything(from_param=from_dat,to=to,page=2,language=lan,sources='bbc-news,the-verge',)
+            # from_param="2022-11-08",to="2022-11-09",page=2,
+            articles=topheadlines['articles']   
+            desc=[]
+            news=[]
+            img=[]
+            timing=[]
+            more=[]
+            auth=[]
+            for i in range(len(articles)):
+                myarticles=articles[i]
+
+                news.append(myarticles['title'])
+                desc.append(myarticles['description'])
+                img.append(myarticles['urlToImage'])
+                x=myarticles['publishedAt']
+                timing.append(x[0:10]+" @ "+x[11:16])
+                more.append(myarticles['url'])
+                au=myarticles['author']
+                if au==None or au[0:3]=="htt": 
+                    au="Media News"
+                auth.append(au)
+            myList=zip(desc,news,img,timing,more,auth)  
+            # print("Above source")
+
+            topsources=newsapi.get_sources(language=lan)
+            articles=topsources['sources']
+            desc=[]#category
+            name=[]
+            url=[]
+            chan=[]
+            # timing=[]
+            coun=[]
+            for i in range(len(articles)):
+                myarticles=articles[i]
+                chan.append(myarticles['id'])
+                name.append(myarticles['name'])
+                desc.append(myarticles['category'].capitalize())
+                url.append(myarticles['url'])
+                coun.append(myarticles['country'].upper())
+
+            mySources=zip(name,desc,url,coun,chan)  
+
+            return render_template('dash_date.html',context=myList,channels=mySources,ida=from_dat,idb=to,lan=lan.upper())
         except Exception as e:
              print("Exception : "+str(e))
 
