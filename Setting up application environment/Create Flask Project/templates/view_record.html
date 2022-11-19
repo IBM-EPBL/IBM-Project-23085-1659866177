@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Record</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/css/all.min.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-offset-1 col-md-10">
+            <h2 class="page-header text-primary text-center">List of users</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Contact</th>
+                    <th>E-Mail</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for res in data %}
+                        {% set i=loop.index %}
+                    <tr>
+                        <td>{{i}}</td>
+                        <td>{{res["name"]}}</td>
+                        <td>{{res["address"]}}</td>
+                        <td>{{res["contact"]}}</td>
+                        <td>{{res["mail"]}}</td>
+                        <td style="text-align:center"><a href="{{url_for('update_record',id=res['pid'])}} " class="btn btn-primary">Update</a></td>
+                        <td style="text-align:center"><a href="{{url_for('delete_record',id=res['pid'])}} " class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div>
+                <a href="{{url_for('home')}}" class="btn btn-primary pull-right"> <- Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

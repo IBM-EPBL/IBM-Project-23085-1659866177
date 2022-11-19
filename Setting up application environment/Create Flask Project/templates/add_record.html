@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='myfont/css/all.min.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+</head>
+<body>  
+    <div class="container">
+        <div class="col-md-offset-3 col-md-5">
+            <form method="POST" action="/addData">
+                <h2 class="page-header text-primary text-center">User Registration</h2>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Contact</label>
+                    <input type="text" class="form-control" name="contact" required>
+                </div>
+                <div class="form-group">
+                    <label>Mail</label>
+                    <input type="email" class="form-control" name="mail" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Submit" style="padding: 10px;">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $("form").attr("autocomplete","off");
+    });
+</script>
